@@ -32,6 +32,7 @@ class ShoppingListItem extends StatelessWidget {
   }
 
   TextStyle? _getTextStyle(BuildContext context) {
+    // Logic appears to resemble C. 
     if (!inCart) return null;
     return const TextStyle(
       color: Colors.black54,
@@ -44,7 +45,7 @@ class ShoppingListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () {
+      onTap: () { // lambda functions take the form of (args) {logic};
         onCartChanged(product, inCart);
       },
       leading: CircleAvatar(
